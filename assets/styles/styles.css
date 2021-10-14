@@ -1,0 +1,394 @@
+/** VARIABLES **/
+
+:root {
+    scroll-behavior: smooth;
+    /*FUENTES*/
+    --openSans: 'Open Sans', sans-serif;
+    /*COLORES*/
+    --blanco: #ffff;
+    --lila: #9f8ad0;
+}
+
+/** GLOBALES **/
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 2;
+    font-family: var(--openSans);
+}
+
+.container {
+    width: min(90%, 120rem);
+    margin: 0 auto;
+    padding: 5rem 0;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+    line-height: 1.2;
+    margin: 0;
+}
+
+h1 {
+    font-size: 4.7rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.8rem;
+}
+
+p {
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* MOBILE */
+
+/* HEADER */
+
+.header {
+    height: 100vh;
+    background-image: linear-gradient(to top, rgba(176, 149, 238, 0.473) 0%, rgba(251, 194, 235, 0.356) 100%), url(../img/christin-hume-mfB1B1s4sMc-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.head {
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--blanco);
+    text-align: center;
+}
+
+.hamburguer {
+    position: fixed;
+    top: 3rem;
+    right: 3rem;
+    background: var(--blanco);
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .4);
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100%;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    box-shadow: 0 0 6px rgba(0, 0, 0, .4);
+    transition: transform .3s ease-in-out;
+    transform: translate(110%);
+}
+
+.spread {
+    transform: translate(0);
+}
+
+.nav a {
+    color: var(--blanco);
+}
+
+.title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.copy {
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+/* NUESTRO SERVICIO */
+
+.subtitle {
+    text-align: center;
+    font-weight: 300;
+    color: var(--lila);
+    margin-bottom: 4rem;
+}
+
+.service__container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.service__container img {
+    width: 80%;
+    margin-bottom: 4rem;
+}
+
+.ourService {
+    width: 80%;
+}
+
+.service {
+    margin-bottom: 3rem;
+}
+
+.n-service {
+    margin-bottom: .7rem;
+    color: var(--lila);
+}
+
+.number {
+    display: inline-block;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    width: 3rem;
+    height: 3rem;
+    color: var(--blanco);
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 700;
+    line-height: 3rem;
+    margin-right: .5rem;
+}
+
+/* GALERIA */
+
+.gallery {
+    background: #f2f2f2;
+}
+
+.container__gallery {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.img-gallery {
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .4);
+    cursor: pointer;
+}
+
+.img-light {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translate(100%);
+    transition: transform .2s ease-in-out;
+}
+
+.show {
+    transform: translate(0);
+}
+
+.add-img {
+    width: 80%;
+    object-fit: cover;
+    border-radius: 1rem;
+    transform: scale(0);
+    transition: transform .3s .2s;
+}
+
+.showImage {
+    transform: scale(1);
+}
+
+.close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 4rem;
+    cursor: pointer;
+}
+
+/* EXPERTOS */
+
+.experts {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cont__expert {
+    width: 80%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.cont__expert img {
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
+.n-expert {
+    display: inline-block;
+    margin-top: 2rem;
+    width: 100%;
+    font-weight: 400;
+}
+
+/* FOOTER */
+
+.footer {
+    background: var(--lila);
+    padding-bottom: 0.1px;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+}
+
+.contact-us {
+    width: 80%;
+    margin-bottom: 4rem;
+    text-align: center;
+    color: var(--blanco);
+}
+
+.brand {
+    font-weight: 500;
+}
+
+.brand span {
+    font-weight: bold;
+}
+
+.brand+p {
+    font-weight: 500;
+}
+
+.social-media {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.social-media__icon {
+    display: inline-block;
+    margin-left: 2rem;
+    width: 6rem;
+    height: 6rem;
+    border: 1px solid var(--blanco);
+    border-radius: 50%;
+    text-align: center;
+    color: var(--blanco);
+    transition: .3s ease-in-out;
+}
+
+.social-media__icon:hover {
+    background: var(--blanco);
+    color: var(--lila);
+}
+
+.social-media__icon i {
+    font-size: 3rem;
+    line-height: 6rem;
+    margin-left: 0;
+}
+
+.line {
+    width: 90%;
+    margin: 0 auto;
+    height: .20rem;
+    background: var(--blanco);
+    margin-bottom: 6rem;
+}
+
+/* ESCRITORIO */
+
+@media(min-width: 700px) {
+    /* HEADER */
+    .nav {
+        width: 30vw;
+    }
+    .title {
+        font-size: 6rem;
+        margin-bottom: 1rem;
+    }
+    .copy {
+        font-weight: 300;
+        font-size: 2.5rem;
+    }
+    /* SERVICIO */
+    .service__container img {
+        width: 40%;
+    }
+    .ourService {
+        width: 45%;
+    }
+    .service {
+        margin-bottom: 2rem;
+    }
+    /* GALERIA */
+    .img-gallery {
+        display: block;
+        width: 30%;
+    }
+    .add-img {
+        width: 60%;
+    }
+    /* EXPERTOS */
+    .cont__expert {
+        width: 30%;
+    }
+    /* FOOTER */
+    .footer__content {
+        justify-content: space-evenly;
+    }
+    .social-media {
+        width: 50%;
+        justify-content: flex-end;
+    }
+    .contact-us {
+        width: 40%;
+        text-align: left;
+        margin-bottom: 0;
+    }
+}

@@ -73,7 +73,7 @@ img {
 
 .header {
     height: 100vh;
-    background-image: linear-gradient(to top, rgba(176, 149, 238, 0.473) 0%, rgba(251, 194, 235, 0.356) 100%), url(../img/christin-hume-mfB1B1s4sMc-unsplash.jpg);
+    background-image: linear-gradient(to top, rgba(176, 149, 238, 0.473) 0%, rgba(251, 194, 235, 0.356) 100%), url(../assets/img/christin-hume-mfB1B1s4sMc-unsplash.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
